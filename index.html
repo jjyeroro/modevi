@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모드비  I  MODEVI  I  내 생활이 바뀌는 생활가전</title>
+
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <div class="popup" id="popup">
+    <div class="swiper popupSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/popup.png" alt="모드비 브랜드 팝업"></div>
+        <div class="swiper-slide"><img src="images/popup.png" alt="모드비 브랜드 팝업"></div>
+      </div>
+      <div class="popupnumber">1 / 1</div>
+    </div>
+    <div class="popuptxt">
+      <label onclick="closePopup()">
+        <input type="checkbox" class="todayclose" id="ptoday">
+        오늘 하루 보지 않기</label>
+      <div class="close">닫기</div>
+    </div>
+  </div>
+  <header>
+    <div class="inner">
+      <div class="left">
+        <div class="logo">
+          <a href="#"><img src="images/icon_logo.svg" alt="logo"></a>
+        </div>
+        <nav>
+          <ul>
+            <li class="main"><a href="#">Brand</a>
+              <ul class="sub">
+                <li><a href="https://www.modevi.co.kr/front/brandStory/history">History</a></li>
+                <li><a href="https://www.modevi.co.kr/front/brandStory/ours">OURS</a></li>
+                <li><a href="https://www.modevi.co.kr/front/brandStory/sns">SNS</a></li>
+                <li><a href="https://www.modevi.co.kr/front/brandStory/youtube">Youtube</a></li>
+              </ul>
+            </li>
+            <li class="main"><a href="#">냉장고</a>
+              <ul class="sub">
+                <li><a href="https://www.modevi.co.kr/front/product/category/36?cateIdx=36&isFilter=T&filterCount=0&psort=new">복합형</a></li>
+                <li><a href="https://www.modevi.co.kr/front/product/category/6?cateIdx=6&isFilter=T&filterCount=0&psort=new">4도어</a></li>
+                <li><a href="https://www.modevi.co.kr/front/product/category/7?cateIdx=7&isFilter=T&filterCount=0&psort=new">양문형</a></li>
+                <li><a href="https://www.modevi.co.kr/front/product/category/39?cateIdx=39&isFilter=T&filterCount=0&psort=new">미니</a></li>
+                <li><a href="https://www.modevi.co.kr/front/product/category/66?cateIdx=66&isFilter=T&filterCount=0&psort=new">콤비</a></li>
+              </ul>
+            </li>
+            <li class="main"><a href="#">주방가전</a>
+              <ul class="sub">
+                <li><a href="https://www.modevi.co.kr/front/product/category/64?cateIdx=64&isFilter=T&filterCount=0&psort=new">와인셀러</a></li>
+                <li><a href="https://www.modevi.co.kr/front/product/category/41?cateIdx=41&isFilter=T&filterCount=0&psort=new">전자레인지</a></li>
+                <li><a href="https://www.modevi.co.kr/front/product/category/42?cateIdx=42&isFilter=T&filterCount=0&psort=new">인덕션</a></li>
+              </ul>
+            </li>
+            <li class="main"><a href="#">생활가전</a>
+              <ul class="sub">
+                <li><a href="https://www.modevi.co.kr/front/product/category/38?cateIdx=38&isFilter=T&filterCount=0&psort=new">세탁기</a></li>
+              </ul>
+            </li>
+            <li class="main"><a href="#">Fit in Modevi</a>
+              <ul class="sub">
+                <li><a href="https://www.modevi.co.kr/front/product/category/50?cateIdx=50&isFilter=T&filterCount=0&psort=new">나만의 가전</a></li>
+                <li><a href="https://www.modevi.co.kr/front/product/category/51?cateIdx=51&isFilter=T&filterCount=0&psort=new">스위트 홈 가전</a></li>
+                <li><a href="https://www.modevi.co.kr/front/product/category/52?cateIdx=52&isFilter=T&filterCount=0&psort=new">뉴 라이프 가전</a></li>
+                <li><a href="https://www.modevi.co.kr/front/product/recommendItem?cateIdx=49&isFilter=F&psort=new">추천 제품</a></li>
+              </ul>
+            </li>
+            <li class="mainn"><a href="#">나우 모드비</a></li>
+          </ul>
+
+        </nav>
+      </div>
+      <div class="right">
+        <a href="#"><img src="images/icon_search.svg" alt="search"></a>
+        <a href="https://www.modevi.co.kr/front/auth/login">
+          <img src="images/icon_mypage.png" alt="mypage">
+        </a>
+        <a href="https://smartstore.naver.com/carrierref/category/58bfac0cd91d43d98a8e473cc8533071?cp=1" target="_blank">
+          <span>Smart Store</span>
+        </a>
+      </div>
+    </div>
+    <div class="sub-back"></div>
+  </header>
+  <main>
+    <div class="headerspace"></div>
+    <!-- main slide -->
+    <section class="m_slide">
+      <div class="swiper slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/slide1.jpg" alt="slide1">
+            <div class="text_box">
+              <h2>섬세한 와인을 즐기는 감각적인 방법</h2>
+              <p>도시감성을 담은 와인에디션 냉장고</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/slide2.jpg" alt="slide2">
+            <div class="text_box" id="second">
+              <h2>FIND YOUR SPACE</h2>
+              <p>나의 공간에 완벽하고 새롭게</p>
+            </div>
+          </div>
+        </div>
+        <div class="sw-next"></div>
+        <div class="sw-prev"></div>
+        <div class="pg">
+          <div class="sw-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- main1 -->
+    <div class="main1" data-aos="fade-up">
+
+      <div class="m_title">Modevi's Pick</div>
+
+      <div class="m1_menu">신제품</div>
+
+      <div class="inner">
+        <div>
+          <div><a href="https://www.modevi.co.kr/front/product/20065"></a></div>
+          <a href="https://www.modevi.co.kr/front/product/20065">와인에디션 실버글라스 553L</a>
+          <div>1,490,000원</div>
+        </div>
+        <div>
+          <div><a href="https://www.modevi.co.kr/front/product/20064"></a></div>
+          <a href="https://www.modevi.co.kr/front/product/20064">김치에디션 실버메탈 601L</a>
+          <div>1,490,000원</div>
+        </div>
+        <div>
+          <div><a href="https://www.modevi.co.kr/front/product/20068"></a></div>
+          <a href="https://www.modevi.co.kr/front/product/20068">모드비 드럼 세탁기 화이트 10kg</a>
+          <div>599,000원</div>
+        </div>
+        <div>
+          <div><a href="https://www.modevi.co.kr/front/product/20019"></a></div>
+          <a href="https://www.modevi.co.kr/front/product/20019">모드비 전기레인지 블랙</a>
+          <div>399,000원</div>
+        </div>
+      </div>
+    </div>
+    <!-- main2 -->
+    <div class="main2" data-aos="fade-up">
+      <div class="m_title">Fit in Modevi</div>
+      <div class="inner">
+        <ul class="m2_menu">
+          <li>나만의 가전</li>
+          <li>스위트 홈 가전</li>
+          <li>뉴 라이프 가전</li>
+        </ul>
+        <ul class="m2_item">
+          <li>
+            <ul class="m2_items">
+              <li>
+                <a href="https://www.modevi.co.kr/front/product/20034">
+                  <img src="images/my1.png" alt="미니 냉장고">
+                  <div>
+                    <div>MRDC117PSM1</div>
+                    <div>미니 냉장고 파스텔 핑크 117L</div>
+                    <div>View More</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.modevi.co.kr/front/product/20056">
+                  <img src="images/my2.png" alt="피트인 냉장고">
+                  <div>
+                    <div>MRNF474SPI1</div>
+                    <div>피트인 냉장고 실버메탈 474L</div>
+                    <div>View More</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.modevi.co.kr/front/product/20021">
+                  <img src="images/my3.png" alt="플랫 전자레인지">
+                  <div>
+                    <div>MO8D23SFE1</div>
+                    <div>플랫 전자레인지 실버 23L</div>
+                    <div>View More</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="m2_items">
+              <li>
+                <a href="https://www.modevi.co.kr/front/product/20064">
+                  <img src="images/sweet1.png" alt="김치에디션">
+                  <div>
+                    <div>MRNF601SPM2</div>
+                    <div>김치에디션 실버메탈 601L</div>
+                    <div>View More</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.modevi.co.kr/front/product/20065">
+                  <img src="images/sweet2.png" alt="와인에디션">
+                  <div>
+                    <div>MRNH553AWS1</div>
+                    <div>와인에디션 실버글라스 553L</div>
+                    <div>View More</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.modevi.co.kr/front/product/20023">
+                  <img src="images/sweet3.png" alt="">
+                  <div>
+                    <div>MWFB10DBPM1</div>
+                    <div>모드비 드럼 세탁기 다크 블루 10kg</div>
+                    <div>View More</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="m2_items">
+
+              <li>
+                <a href="https://www.modevi.co.kr/front/product/20065">
+                  <img src="images/newlife1.png" alt="와인에디션">
+                  <div>
+                    <div>MRNH553AWS1</div>
+                    <div>와인에디션 실버글라스 553L</div>
+                    <div>View More</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.modevi.co.kr/front/product/20063">
+                  <img src="images/newlife2.png" alt="피트인 냉장고">
+                  <div>
+                    <div>MRNF601BPM1</div>
+                    <div>김치에디션 블랙메탈 601L</div>
+                    <div>View More</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.modevi.co.kr/front/product/20021">
+                  <img src="images/newlife3.png" alt="플랫 전자레인지">
+                  <div>
+                    <div>MRNF474CPI1</div>
+                    <div>피트인 냉장고 코타 그레이/블루 474L</div>
+                    <div>View More</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- main3 -->
+    <div class="main3" data-aos="fade-up">
+      <section class="story">
+        <div class="m3_txt">
+          <p>Modevi Story</p>
+          <a href="https://www.instagram.com/modevi_official/" target="_blank">View More</a>
+        </div>
+        <div class="swiper m3_swiper storyswiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="https://www.instagram.com/p/C3R6-3rR6Is/" target="_blank">
+                <div><img src="images/story1.jpg" alt="1"></div>
+                <div>뉴 라이프 스타일에 딱 맞춘 모드비 김치에디션</div>
+                <div>모드비만의 트렌디한 보관법으로 더욱 새로워진 일상을 경험하세요.</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.instagram.com/p/C4umhxvRtre/?img_index=1" target="_blank">
+                <div><img src="images/story2.jpg" alt="2"></div>
+                <div>나의 공간에 맞춘 듯한 슬림핏 디자인</div>
+                <div>당신의 일상, 모드비 전자동 세탁기와 함께</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.instagram.com/p/C3R6-3rR6Is/" target="_blank">
+                <div><img src="images/story3.jpg" alt="3"></div>
+                <div>가전에 따라 변화하는 공간</div>
+                <div>새롭게 출시될 601L 김치에디션으로 감각적인 인테리어를 연출해 보세요.</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.instagram.com/p/C4umhxvRtre/?img_index=1" target="_blank">
+                <div><img src="images/story4.jpg" alt="4"></div>
+                <div>FIT IN YOUR SPACE ! 모던한 디자인, 실용적인 내부 공간 618L 피트인 냉장고</div>
+                <div>어디에나 어울리는 모드비 제품이 당신의 공간에 새로운 라이프스타일을 선사합니다</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.instagram.com/p/C4umhxvRtre/?img_index=1" target="_blank">
+                <div><img src="images/story5.jpg" alt="5"></div>
+                <div>FIT IN YOUR STYLE with MODEVI</div>
+                <div>모드비로 채우는 당신의 스타일, 당신의 공간</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.instagram.com/p/C4umhxvRtre/?img_index=1" target="_blank">
+                <div><img src="images/story6.png" alt="6"></div>
+                <div>FIT IN YOUR SPACE !</div>
+                <div>나의 공간에 완벽하게 FIT한 모드비로 새롭게 달라질 나의 일상을 경험하세요.</div>
+              </a>
+            </div>
+          </div>
+          <div class="m3_button-next"></div>
+          <div class="m3_button-prev"></div>
+        </div>
+      </section>
+      <section class="youtube">
+        <div class="m3_txt">
+          <p>Youtube</p>
+          <a href="https://www.youtube.com/@user-mp9ve1vi5e" target="_blank">View More</a>
+        </div>
+        <div class="swiper m3_swiper youtubeswiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="https://www.youtube.com/watch?v=rX36XRUlQrw" target="_blank">
+                <div><img src="images/youtube1.jpg" alt="1"></div>
+                <div>모드비 브랜드 필름_1인 가구편</div>
+                <div>나만의 라이프 스타일을 완성해줄 감성가전을 만나보세요.“가전이 바뀌면 생활이 바뀐다.” 따스한 햇살이 내리쬐는 주말 아침, 늦잠을 자고 난 후 나를 위해 맛있는 한 끼를 준비하는
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.youtube.com/watch?v=2djCIw5Hjdw" target="_blank">
+                <div><img src="images/youtube2.jpg" alt="2"></div>
+                <div>모드비 브랜드 필름_신혼부부편</div>
+                <div>"가전이 바뀌면 생활이 바뀐다."" 사랑하는 사람과 함께 맛있는 추억을 쌓아가는 공간.</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.youtube.com/watch?v=N8nJO2Lf8v8" target="_blank">
+                <div><img src="images/youtube3.jpg" alt="3"></div>
+                <div>모드비 브랜드 필름_홈술족편</div>
+                <div>"가전이 바뀌면 생활이 바뀐다." 모드비 와인플러스 냉장고에서 꺼낸 와인과 함께 무르익어 가는 좋아하는 사람들과 보내는 저녁시간</div>
+              </a>
+            </div>
+          </div>
+          <div class="m3_button-next"></div>
+          <div class="m3_button-prev"></div>
+        </div>
+
+      </section>
+      <section class="store">
+        <img src="images/store1.png" alt="modevi 신세계 타임스퀘어점">
+        <div class="store_txt">
+          <div class="store_txt_top">
+            <div>modevi 신세계 타임스퀘어점</div>
+            <div>운영시간: 10:30~20:00</div>
+            <div>주소: 서울 영등포구 영중로 9 신세계백화점<button>[주소복사]</button></div>
+          </div>
+          <div class="store_txt_bottom">
+            <img src="images/store2.png" alt="">
+            <div>
+              <div>전국 Modevi 매장에서 현재 판매중인 제품들을 <br>만나보세요.</div>
+              <div><a href="https://www.modevi.co.kr/front/help/store">매장찾기</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </main>
+  <footer>
+    <div class="inner">
+      <div class="left">
+        <a class="f_logo" href="#">
+          <img src="images/icon_flogo.svg" alt="flogo">
+        </a>
+        <div class="familysite">
+          <div class="select">
+            <a href="#">Family site</a>
+            <a href="#" class="btn"></a>
+          </div>
+          <div class="site">
+            <ul>
+              <li><a href="https://www.autechgroup.co.kr/index.asp" target="_blank">오텍그룹</a></li>
+              <li><a href="http://www.autech.co.kr/index.asp" target="_blank">오텍</a></li>
+              <li><a href="https://www.carrier.co.kr/CarrierRef/index.asp" target="_blank">씨알케이</a></li>
+              <li><a href="https://www.carrier.co.kr/index.asp" target="_blank">캐리어에어컨</a></li>
+              <li><a href="https://www.autech-otis.co.kr/" target="_blank">오텍오티스파킹시스템</a></li>
+              <li><a href="#" target="_blank" target="_blank">모드비</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sns">
+          <a href="https://www.youtube.com/@user-mp9ve1vi5e"><img src="images/icon_footer_youtube.svg" alt="youtube"></a>
+          <a href="https://www.instagram.com/modevi_official/"><img src="images/icon_footer_instar.svg" alt="instar"></a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="qna">
+          <h2><a href="tel:1588-7100">서비스 문의 <em>1588-7100</em> </a></h2>
+          <p>상담가능시간 10:00~17:00</p>
+        </div>
+        <div class="f_menu">
+          <ul>
+            <li><a href="https://www.modevi.co.kr/front/help/notice">공지사항</a></li>
+            <li><a href="https://www.modevi.co.kr/front/help/store">매장찾기</a></li>
+            <li><a href="https://www.modevi.co.kr/front/help/faq?sword=&sclassify=0">FAQ</a></li>
+            <li><a href="#">1:1 문의</a></li>
+          </ul>
+        </div>
+        <address>
+          <p>
+            <a href="https://www.modevi.co.kr/front/etc/termsOfUse">이용약관</a>
+            <a href="https://www.modevi.co.kr/front/etc/policy_privacy">개인정보처리방침</a>
+          </p>
+          <p>
+            <span>씨알케이(주)</span>
+            <span>대표 : 강성희, 김병열</span>
+          </p>
+          <p>
+            <span>주소</span>
+            <span>서울특별시 영등포구 국제금융로 10</span>
+          </p>
+          <p>
+            <span>사업자 등록 번호</span>
+            <span>220-85-07415</span>
+          </p>
+          <p>
+            Copyright 2023 © CRK Corporation. All Rights Reserved.
+          </p>
+        </address>
+      </div>
+    </div>
+  </footer>
+  <div class="fixed">
+    <a href="https://www.youtube.com/watch?v=N8nJO2Lf8v8" class="youtubebtn" target="_blank">
+      <img src="images/icon_youtube_bg.png" alt="youtube">
+    </a>
+    <a href="#" class="gotopbtn">
+      <img src="images/icon_arrow_top_bg.svg" alt="top">
+    </a>
+  </div>
+
+  <script>
+    var swiper = new Swiper(".slide", {
+      loop: true,
+      slidesPerView: 1,
+      loopedSlides: 2,
+      pagination: {
+        el: ".sw-pagination",
+        type: "progressbar",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".sw-next",
+        prevEl: ".sw-prev",
+      },
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      speed: 600,
+    });
+    var popupswiper = new Swiper(".popupSwiper", {
+      loop: true,
+      autoplay: true,
+    });
+    AOS.init({
+      duration: 1200,
+    });
+    var m3swiper1 = new Swiper(".storyswiper", {
+      navigation: {
+        nextEl: ".m3_button-next",
+        prevEl: ".m3_button-prev",
+      },
+      slidesPerView: 3,
+      loop: true,
+      spaceBetween: 12,
+      loopAdditionalSlides: 1,
+    });
+    var m3swiper2 = new Swiper(".youtubeswiper", {
+      navigation: {
+        nextEl: ".m3_button-next",
+        prevEl: ".m3_button-prev",
+      },
+      slidesPerView: 2,
+      loop: true,
+      spaceBetween: 12,
+    });
+  </script>
+</body>
+
+</html>
